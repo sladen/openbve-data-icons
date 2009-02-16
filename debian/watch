@@ -1,0 +1,4 @@
+# Example watch control file for uscan
+version=3
+
+http://www.paul.sladen.org/openbve/artwork/openbve-interface-icons(.*)\.tar\.gz

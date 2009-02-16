@@ -1,0 +1,9 @@
+openbve-data-icons
+------------------
+
+These icons "fill in" some missing gaps in the upstream 'openbve-data'
+distribution where tempoary icons had been used and were later removed.
+
+As such it is set as Enhances: openbve-data-icons
+
+ -- Paul Sladen <openbve@paul.sladen.org>  Mon, 16 Feb 2009 18:04:24 +0200
