@@ -9,8 +9,7 @@ Homepage: http://www.paul.sladen.org/openbve/artwork/
 Package: openbve-data-icons
 Architecture: all
 Enhances: openbve-data
-Description: Extra 16x16 icons
+Description: realistic 3D train/railway simulator (missing 16x16 icons)
  Origially OpenBVE used some tempoary icons borrowed from
  other projects.  These from-scratch public domain icons
  replace the missing gaps.
- 
