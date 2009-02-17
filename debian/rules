@@ -2,6 +2,11 @@
 # -*- makefile -*-
 export DH_VERBOSE=1
 
+PNG_ICONS = icon_parent icon_folder icon_file icon_train \
+  icon_joypad icon_joystick icon_keyboard icon_mouse joystick
+
+TARGET=$(CURDIR)/debian/openbve-data-icons
+
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
@@ -24,11 +29,11 @@ install: build
 	dh_prep  
 	dh_installdirs
 
-	# Add here commands to install the package into debian/openbve-data-icons.
-	$(MAKE) DESTDIR=$(CURDIR)/debian/openbve-data-icons install
-
-binary-arch: install
-	# We have nothing to do by default.
+	# Only copy a subset of the icons needed to fill in the gaps
+	for png_icon in $(PNG_ICONS); do \
+	  cp -p $(CURDIR)/Interface/$$png_icon.png $(TARGET)/usr/lib/openbve/Interface/ ; \
+	done
+	cp -p $(CURDIR)/debian/openbve-data-icons.lintian $(TARGET)/usr/share/lintian/overrides/openbve-data-icons
 
 # Build architecture-independent files here.
 binary-indep: install
@@ -43,5 +48,5 @@ binary-indep: install
 	dh_md5sums
 	dh_builddeb
 
-binary: binary-indep binary-arch
+binary: binary-indep
 .PHONY: build clean binary-indep binary-arch binary install configure
