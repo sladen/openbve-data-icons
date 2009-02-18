@@ -42,6 +42,7 @@ binary-indep: install
 	dh_installchangelogs 
 	dh_installdocs
 	dh_install
+	dh_compress
 	dh_fixperms
 	dh_installdeb
 	dh_gencontrol
