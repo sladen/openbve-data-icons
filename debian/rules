@@ -31,7 +31,7 @@ install: build
 
 	# Only copy a subset of the icons needed to fill in the gaps
 	for png_icon in $(PNG_ICONS); do \
-	  cp -p $(CURDIR)/Interface/$$png_icon.png $(TARGET)/usr/lib/openbve/Interface/ ; \
+	  cp -p $(CURDIR)/Interface/$$png_icon.png $(TARGET)/usr/share/games/openbve/data/Interface/ ; \
 	done
 	cp -p $(CURDIR)/debian/openbve-data-icons.lintian $(TARGET)/usr/share/lintian/overrides/openbve-data-icons
 
